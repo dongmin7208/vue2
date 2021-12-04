@@ -14,6 +14,7 @@
     <p v-on:mousemove="changeMousePosition($event, 10)">マウスを乗せてください。
     <!-- <span v-on:mousemove="noEvent">反応しないでください。</span></p> -->
     <span v-on:mousemove.stop>反応しないでください。</span></p>
+    <a v-on:click="noEvent" href="https://github.com/dongmin7208">Github</a>
     <p>X: {{x}}, Y: {{y}}</p>
 </div>
 <script src="index.js"></script>

@@ -14,8 +14,11 @@ new Vue({
             this.x = event.clientX / divideNumber;
             this.y = event.clientY / divideNumber;
         },
-        noEvent: function(event) {
-            event.stopPropagation()
+        noEvent: function(event){
+            event.preventDefault();
         }
+        // noEvent: function(event) {
+        //     event.stopPropagation()
+        // }
     }
 })
