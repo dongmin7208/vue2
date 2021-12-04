@@ -7,6 +7,14 @@
     <title>Document</title>
 </head>
 <body>
-    hello
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.7/dist/vue.js"></script>
+<div id="app">
+    <p>現在{{ number }}回クリックされています、。</p>
+    <button v-on:click="countUp(3)">アカウントアップ</button>
+    <p v-on:mousemove="changeMousePosition($event, 10)">マウスを乗せてください。<span>反応しないでください。</span></p>
+    <p>X: {{x}}, Y: {{y}}</p>
+</div>
+
+    
 </body>
 </html>
