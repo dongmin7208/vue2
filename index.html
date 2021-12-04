@@ -10,14 +10,22 @@
 <body>
 <div id="app">
     <p>現在{{ number }}回クリックされています、。</p>
-    <button v-on:click="countUp(3)">アカウントアップ</button>
+    <!-- <button v-on:click="countUp(3)">アカウントアップ</button> -->
+    
+    <!-- <button v-on:[event]="countUp(3)">アカウントアップ</button> -->
+    <!-- index.js > data: >> event:'click', -->
+    
+    <button @click="countUp(3)">アカウントアップ</button>
+    <!-- index.js > data: >> number:0, -->
+    
     <p v-on:mousemove="changeMousePosition($event, 10)">マウスを乗せてください。
     <!-- <span v-on:mousemove="noEvent">反応しないでください。</span></p> -->
     <span v-on:mousemove.stop.prevent>反応しないでください。</span></p>
     <a v-on:click.prevent.stop="noEvent" href="https://github.com/dongmin7208">Github</a>
     <p>X: {{x}}, Y: {{y}}</p>
     <!-- <input type="text" v-on:keyup.enter="myAlert"> -->
-    <input type="text" v-on:keyup.space="myAlert">
+    <!-- <input type="text" v-on:keyup.space="myAlert"> -->
+    <input type="text" v-on:keyup.space.enter="myAlert">
 </div>
 <script src="index.js"></script>
 
