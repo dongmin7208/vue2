@@ -13,6 +13,9 @@ new Vue({
         changeMousePosition: function(event, divideNumber) {
             this.x = event.clientX / divideNumber;
             this.y = event.clientY / divideNumber;
+        },
+        noEvent: function(event) {
+            event.stopPropagation()
         }
     }
 })
