@@ -16,7 +16,8 @@
     <span v-on:mousemove.stop.prevent>反応しないでください。</span></p>
     <a v-on:click.prevent.stop="noEvent" href="https://github.com/dongmin7208">Github</a>
     <p>X: {{x}}, Y: {{y}}</p>
-    <input type="text" v-on:keyup.enter="myAlert">
+    <!-- <input type="text" v-on:keyup.enter="myAlert"> -->
+    <input type="text" v-on:keyup.space="myAlert">
 </div>
 <script src="index.js"></script>
 
