@@ -12,11 +12,9 @@
         <p v-if="ok">If</p>
         <p v-show="ok">Show</p>
 
-        <!-- 
-            <!---->
-            <!-- <p style="display: none;">Show</p> -->
-            <!-- v-show 이렇게 바뀜 -->
-         -->
+       <template v-show="ok">
+           <p>test</p>
+       </template>
     </div>
 
     <script src="../vue.js"></script>
