@@ -11,10 +11,7 @@
         <button @click="ok = !ok">buttonn</button>
         <p v-if="ok">If</p>
         <p v-show="ok">Show</p>
-
-       <template v-show="ok">
-           <p>test</p>
-       </template>
+        <p v-show="!ok">no ok</p>
     </div>
 
     <script src="../vue.js"></script>
