@@ -10,8 +10,8 @@
 
 <body>
     <div id="app">
-        <ul>
-            <!-- <li v-for="fruit in fruits">{{fruits}}</li> -->
+        <!-- <ul>
+            <li v-for="fruit in fruits">{{fruits}}</li>
             <li v-for="value in fruits">{{fruits}}</li>
             <li v-for="(fruit) in fruits">{{fruits}}</li>
             <li v-for="(fruit, index) in fruits">({{index}}){{fruits}}</li>
@@ -23,8 +23,13 @@
         <ul>
             <li v-for="(value, key) in object">{{key}}--{{value}}</li>
             <li v-for="(value, key, index) in object">({{index}}){{key}}--{{value}}</li>
+        </ul> -->
+        <ul>
+            <template v-for="fruit in fruits">
+                <li>{{fruit}}</li>
+                <hr>
+            </template>
         </ul>
-
     </div>
 
     <script src="../vue.js"></script>
