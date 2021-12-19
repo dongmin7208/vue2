@@ -1,12 +1,17 @@
-new Vue({
+var vm1 =new Vue({
     el:"#app1",
     data: {
-     message: 'instances1'
+     message1: 'instances1'
     }
 })
-new Vue({
+var vm2 =new Vue({
     el:"#app2",
     data: {
-     message: 'instances2'
+        message: 'instances2'
+    },
+    methods: {
+        changeMessage1: function () {
+            vm1.message1 = "eee"
+        }
     }
 })
