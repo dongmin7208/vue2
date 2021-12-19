@@ -12,6 +12,10 @@
         <p v-if="ok">If</p>
         <p v-show="ok">Show</p>
         <p v-show="!ok">no ok</p>
+
+    <template v-show="ok">
+        <p>test</p>
+    </template>
     </div>
 
     <script src="../vue.js"></script>
