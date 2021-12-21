@@ -11,7 +11,7 @@ var vm2 =new Vue({
     },
     methods: {
         changeMessage1: function () {
-            vm1.message1 = "인스턴스2로부터 조종중"
+            vm1.message1 = "instances2からvm1を触っている、"
         }
     }
 })
