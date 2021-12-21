@@ -1,12 +1,32 @@
-var vm1 =new Vue({
-    el:"#app1",
+var vm =new Vue({
+    el:"#app",
     data: {
-     message1: 'instances1'
-    }
+     message: 'hello',
+     firstName: 'park',
+     lastName: 'dongmin'
+    },
+    computed: {
+        fullName: {
+          get () {
+            alert("Assembling Full Name ... ");
+            return this.firstName + ' ' + this.lastName;
+          },
+          set (newValue) {
+            alert("Setting new name: " + newValue);
+            const parts = newValue.split(' ');
+            this.firstName = parts[0];
+            this.lastName = parts[parts.length - 1];
+          }
+        }
+      },
+      methods: {
+        // ...
+        changeNameSetter: function(newName) {
+          this.fullName = newName; 
+        }
+      },
 })
-new Vue({
-    el:"#app2",
-    data: {
-    }
-})
-vm1.message1 = 'instances1'
+// vm.message= ' change!'
+// vm.message = 'change'
+// vm.name = 'park'
+console.log(vm)
